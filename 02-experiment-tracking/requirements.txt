@@ -1,7 +1,21 @@
-mlflow
-jupyter
-scikit-learn
-pandas
-seaborn
-hyperopt
-xgboost
+mlflow==2.22.0
+scikit-learn==1.6.1
+pandas==2.2.3
+seaborn==0.13.2
+hyperopt==0.2.7
+xgboost==3.0.1
+
+# jupyter notebook
+IPython==8.36.0
+ipykernel==6.29.5
+ipywidgets==8.1.7
+jupyter_client==8.6.3
+jupyter_core==5.7.2
+jupyter_server==2.16.0
+jupyterlab==4.4.2
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+notebook==7.4.2
+qtconsole==not installed
+traitlets==5.14.3

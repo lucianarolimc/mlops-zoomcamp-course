@@ -2,10 +2,16 @@
 
 ```bash
 
-# Create the conda environment
+# create the conda environment - python version = 3.10.16
+conda create -n mlops_zoomcamp python=3.10.16
 
-conda create ...
+# activate the environment
+conda activate mlops_zoomcamp
 
-# Install the requirements
+# install the requirements
+pip install -r requirements.txt
 
-pip install ...
+# get the version of the Python library - example
+conda list pandas
+
+```
