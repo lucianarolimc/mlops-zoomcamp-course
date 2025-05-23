@@ -1,5 +1,11 @@
-## Commands used
+## List of commands used in the development process
 
-### Create the conda environment
+```bash
+
+# Create the conda environment
 
 conda create ...
+
+# Install the requirements
+
+pip install ...
