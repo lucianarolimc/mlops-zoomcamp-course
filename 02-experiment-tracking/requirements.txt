@@ -6,6 +6,7 @@ hyperopt==0.2.7
 xgboost==3.0.1
 
 # jupyter notebook
+jupyter==1.1.1
 IPython==8.36.0
 ipykernel==6.29.5
 ipywidgets==8.1.7
