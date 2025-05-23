@@ -17,4 +17,10 @@ conda list pandas
 # start the mlflow UI
 mlflow ui --backend-store-uri sqlite:///mlflow.db
 
+# install click to use the 'preprocess_data.py' file provided
+conda install anaconda::click
+
+# apply the preprocessing step using the preprocess_data.py'
+python preprocess_data.py --raw_data_path data/ --dest_path ./output
+
 ```
