@@ -32,7 +32,7 @@ def run_train(data_path: str):
 
     with mlflow.start_run():
 
-        mlflow.set_tag("developer", "lucianar")
+        mlflow.set_tag("developer", "lucianac")
 
         rf = RandomForestRegressor(max_depth=10, random_state=0)
         rf.fit(X_train, y_train)
@@ -48,7 +48,7 @@ def run_train(data_path: str):
         rmse = root_mean_squared_error(y_val, y_pred)
         mlflow.log_metric("rmse", rmse)
 
-        mlflow.log_artifact(local_path=models_dir, artifact_path="artifacts/")
+        mlflow.log_artifact(local_path=models_local_path, artifact_path="artifacts")
     
     
 

@@ -52,9 +52,9 @@ with mlflow.start_run():
 
     mlflow.log_metric("rmse", rmse)
 
-    # 'models_dir' is the directory where the model was saved
-    # 'artifacts' is the directory where
-    mlflow.log_artifact(local_path=models_dir, artifact_path="artifacts/")
+    # 'models_local_path' is the directory where the model was saved
+    # 'artifacts' is the directory where the model will be stored on the MLOps UI
+    mlflow.log_artifact(local_path=models_local_path, artifact_path="artifacts")
 
 ```
 
