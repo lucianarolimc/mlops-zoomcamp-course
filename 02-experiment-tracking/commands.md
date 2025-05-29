@@ -45,9 +45,16 @@ with mlflow.start_run():
     # create an instance of the model
     # fit
     # calculate the predictions
+
+    # save the model
+
     # calculate the evaluation metric
 
     mlflow.log_metric("rmse", rmse)
+
+    # 'models_dir' is the directory where the model was saved
+    # 'artifacts' is the directory where
+    mlflow.log_artifact(local_path=models_dir, artifact_path="artifacts/")
 
 ```
 

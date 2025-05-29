@@ -28,18 +28,29 @@ def run_train(data_path: str):
     X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
 
-    mlflow.autolog()
+    # mlflow.autolog()
 
     with mlflow.start_run():
 
-        mlflow.set_tag("developer", "luciana")
+        mlflow.set_tag("developer", "lucianar")
 
         rf = RandomForestRegressor(max_depth=10, random_state=0)
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_val)
 
+        # saving the model
+        # with open('../models/random_forest_model.bin', 'wb') as f_out:
+        models_dir = './models/'
+        models_local_path = './models/random_forest_model.bin'
+        with open(models_local_path, 'wb') as f_out:
+            pickle.dump(rf, f_out)
+
         rmse = root_mean_squared_error(y_val, y_pred)
-        # mlflow.log_metric("rmse", rmse)
+        mlflow.log_metric("rmse", rmse)
+
+        mlflow.log_artifact(local_path=models_dir, artifact_path="artifacts/")
+    
+    
 
 
 if __name__ == '__main__':
