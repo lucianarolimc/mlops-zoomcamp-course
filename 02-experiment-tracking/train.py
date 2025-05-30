@@ -39,8 +39,7 @@ def run_train(data_path: str):
         y_pred = rf.predict(X_val)
 
         # saving the model
-        # with open('../models/random_forest_model.bin', 'wb') as f_out:
-        models_dir = './models/'
+        # models_dir = './models/'
         models_local_path = './models/random_forest_model.bin'
         with open(models_local_path, 'wb') as f_out:
             pickle.dump(rf, f_out)
